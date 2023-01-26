@@ -1,12 +1,40 @@
-GET http://localhost:8080/contacts
+GET http://localhost:8080/contacts HTTP/1.1
 
-###
-GET http://localhost:8080/contacts/63cc700da94224abf48d03c0
-
-
-###
-GET http://localhost:8080/contacts/63ced13b5e88ae83884260b4
+### For Contact 1
+GET http://localhost:8080/contacts/63cc700da94224abf48d03c0 HTTP/1.1
 
 
-###
-GET http://localhost:8080/contacts/63ced15b5e88ae83884260b5
+### For Contact 2
+GET http://localhost:8080/contacts/63ced13b5e88ae83884260b4 HTTP/1.1
+
+
+### For Contact 3
+GET http://localhost:8080/contacts/63ced15b5e88ae83884260b5 HTTP/1.1
+
+
+### This will create a new contact in my database
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Jay-Cuelen", 
+"lastName":"Check Yo-Self", 
+"email":"unbelieveable@test.com", 
+"favoriteColor":"Clear", 
+"birthday":"10-17-2012"
+}
+
+### This will update my contact in my database
+PUT http://localhost:8080/contacts/63ced13b5e88ae83884260b4 HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Sarah", 
+"lastName":"Valdivia", 
+"email":"myfavorite@gmail.com",
+"favoriteColor":"Darker Black", 
+"birthday":"12/12/20"
+} 
+
+### This will delete a contact in my database
+DELETE http://localhost:8080/contacts/63d2de6d8557f5ca5cc57ca0 HTTP/1.1
