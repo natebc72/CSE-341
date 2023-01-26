@@ -1,0 +1,23 @@
+{
+  "contact": {
+    "firstName": "Monica",
+    "lastName": "Christiansen",
+    "email": "mamabear@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "04/07/1970"
+  },
+  "contact2": {
+    "firstName": "Sarah",
+    "lastName": "Valdivia",
+    "email": "da_bomb_gf@test.com",
+    "favoriteColor": "Black",
+    "birthday": "08/29/2000"
+  },
+  "contact3": {
+    "firstName": "Peyton",
+    "lastName": "Manning",
+    "email": "the_sherriff@test.com",
+    "favoriteColor": "Orange",
+    "birthday": "02/02/1960"
+  }
+}
