@@ -32,9 +32,9 @@ content-type: application/json
 "firstName":"Sarah", 
 "lastName":"Valdivia", 
 "email":"myfavorite@gmail.com",
-"favoriteColor":"Darker Black", 
+"favoriteColor":"Black", 
 "birthday":"12/12/20"
 } 
 
 ### This will delete a contact in my database
-DELETE http://localhost:8080/contacts/63d2de6d8557f5ca5cc57ca0 HTTP/1.1
+DELETE http://localhost:8080/contacts/ HTTP/1.1
