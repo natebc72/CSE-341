@@ -5,10 +5,10 @@
     "description": "My Contacts API",
     "version": "1.0.0"
   },
-  "host": "https://week-4-nbc.onrender.com",
+  "host": "week-4-nbc.onrender.com",
   "basePath": "/",
   "schemes": [
-    "http"
+    "https"
   ],
   "paths": {
     "/api-docs": {

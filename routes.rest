@@ -1,15 +1,15 @@
 GET http://localhost:8080/contacts HTTP/1.1
 
 ### For Contact 1
-GET http://localhost:8080/contacts/63cc700da94224abf48d03c0 HTTP/1.1
+GET http://localhost:8080/contacts/63d4a731b3e5395f07c2c96c HTTP/1.1
 
 
 ### For Contact 2
-GET http://localhost:8080/contacts/63ced13b5e88ae83884260b4 HTTP/1.1
+GET http://localhost:8080/contacts/63d4ab6b02abbd2d58b72f9f HTTP/1.1
 
 
 ### For Contact 3
-GET http://localhost:8080/contacts/63d4a731b3e5395f07c2c96c HTTP/1.1
+GET http://localhost:8080/contacts/63d5936c1abcdbf4a103a509 HTTP/1.1
 
 
 ### This will create a new contact in my database
@@ -22,10 +22,10 @@ content-type: application/json
     "email":"unbelieveable@test.com", 
     "favoriteColor":"Clear", 
     "birthday":"10-17-2012"
-  },
+}
 
 ### This will update my contact in my database
-PUT http://localhost:8080/contacts/63ced13b5e88ae83884260b4 HTTP/1.1
+PUT http://localhost:8080/contacts/63d4a731b3e5395f07c2c96c HTTP/1.1
 content-type: application/json
 
 {
@@ -37,4 +37,47 @@ content-type: application/json
 } 
 
 ### This will delete a contact in my database
-DELETE http://localhost:8080/contacts/ HTTP/1.1
+DELETE https://week-4-nbc.onrender.com/contacts/ HTTP/1.1
+
+##For My Render Pages
+
+GET https://week-4-nbc.onrender.com/contacts HTTP/1.1
+
+### For Contact 1
+GET https://week-4-nbc.onrender.com/contacts/63d4a731b3e5395f07c2c96c HTTP/1.1
+
+
+### For Contact 2
+GET https://week-4-nbc.onrender.com/contacts/63d4ab6b02abbd2d58b72f9f HTTP/1.1
+
+
+### For Contact 3
+GET https://week-4-nbc.onrender.com/contacts/63d5936c1abcdbf4a103a509 HTTP/1.1
+
+
+### This will create a new contact in my database
+POST https://week-4-nbc.onrender.com/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName":"Jay-Cuelen", 
+    "lastName":"Check Yo-Self", 
+    "email":"unbelieveable@test.com", 
+    "favoriteColor":"Clear", 
+    "birthday":"10-17-2012"
+}
+
+### This will update my contact in my database
+PUT https://week-4-nbc.onrender.com/contacts/63d4a731b3e5395f07c2c96c HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Sarah", 
+"lastName":"Valdivia", 
+"email":"myfavorite@gmail.com",
+"favoriteColor":"Darker Black", 
+"birthday":"08/29/00"
+} 
+
+### This will delete a contact in my database
+DELETE https://week-4-nbc.onrender.com/contacts/ HTTP/1.1
