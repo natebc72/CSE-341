@@ -3,9 +3,9 @@ const swaggerAutogen = require('swagger-autogen')();
 const doc = {
   info: {
     title: 'My API',
-    description: 'Contacts API',
+    description: 'My Contacts API',
   },
-  host: 'localhost:8080',
+  host: 'https://week-4-nbc.onrender.com/',
   schemes: ['http'],
 };
 
