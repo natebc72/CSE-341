@@ -9,7 +9,7 @@ GET http://localhost:8080/contacts/63ced13b5e88ae83884260b4 HTTP/1.1
 
 
 ### For Contact 3
-GET http://localhost:8080/contacts/63ced15b5e88ae83884260b5 HTTP/1.1
+GET http://localhost:8080/contacts/63d4a731b3e5395f07c2c96c HTTP/1.1
 
 
 ### This will create a new contact in my database
@@ -17,12 +17,12 @@ POST http://localhost:8080/contacts HTTP/1.1
 content-type: application/json
 
 {
-  "firstName":"Han", 
-  "lastName":"Solo", 
-  "email":"scruffy_falcon@test.com", 
-  "favoriteColor":"Chewie-Brown", 
-  "birthday":"05-04-1977"
-}
+    "firstName":"Jay-Cuelen", 
+    "lastName":"Check Yo-Self", 
+    "email":"unbelieveable@test.com", 
+    "favoriteColor":"Clear", 
+    "birthday":"10-17-2012"
+  },
 
 ### This will update my contact in my database
 PUT http://localhost:8080/contacts/63ced13b5e88ae83884260b4 HTTP/1.1
