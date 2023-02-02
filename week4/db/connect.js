@@ -6,7 +6,7 @@ let _db;
 
 const initDb = (callback) => {
   if (_db) {
-    console.log('Database has been initialized! :)');
+    console.log('Db is already initialized!');
     return callback(null, _db);
   }
   MongoClient.connect(process.env.MONGODB_URI)
@@ -21,7 +21,7 @@ const initDb = (callback) => {
 
 const getDb = () => {
   if (!_db) {
-    throw Error('Database was not initialized :( ');
+    throw Error('Db not initialized');
   }
   return _db;
 };
