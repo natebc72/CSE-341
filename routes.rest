@@ -2,7 +2,7 @@ GET http://localhost:7200/books HTTP/1.1
 
 
 ### This will create a new contact in my database
-POST http://localhost:8080/contacts HTTP/1.1
+POST http://localhost:8080/books HTTP/1.1
 content-type: application/json
 
 {
@@ -23,3 +23,18 @@ content-type: application/json
 
 ###This will be for my Render GET, POST, DELETE
 
+GET https://week-5-nbc.onrender.com/books HTTP/1.1
+
+
+POST https://week-5-nbc.onrender.com/books HTTP/1.1
+content-Type: application/json
+
+{
+    "ispn":"", 
+    "title":"The Silent Patient", 
+    "author":"Michaelides, Alex", 
+    "release":"02-05-2019", 
+    "purchased":"2022",
+    "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages",
+    "rating":"4.2/5"
+}
