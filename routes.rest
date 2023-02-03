@@ -6,7 +6,7 @@ POST http://localhost:7200/books HTTP/1.1
 content-type: application/json
 
 {
-    "ispn":"", 
+    "ispn":"1234567898", 
     "title":"The Silent Patient", 
     "author":"Michaelides, Alex", 
     "release":"02-05-2019", 
