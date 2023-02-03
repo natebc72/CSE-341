@@ -1,7 +1,7 @@
 GET http://localhost:7200/books HTTP/1.1
 
 
-### This will create a new contact in my database
+### This will create a new book in my database
 POST http://localhost:7200/books HTTP/1.1
 content-type: application/json
 
