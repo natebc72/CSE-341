@@ -23,7 +23,7 @@ const getOne = async (req, res, next) => {
 };
 
 const addBook = async (req, res) => {
-  const contact = {
+  const book = {
     ispn: req.body.ispn,
     title: req.body.title,
     author: req.body.author,
@@ -32,7 +32,7 @@ const addBook = async (req, res) => {
     review: req.body.review,
     rating: req.body.rating
   };
-  const response = await mongodb.getDb().db('sarah').collection('books').insertOne(contact);
+  const response = await mongodb.getDb().db('sarah').collection('books').insertOne(book);
   if (response.acknowledged) {
     res.status(201).json(response);
   } else {
