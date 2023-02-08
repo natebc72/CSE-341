@@ -2,28 +2,25 @@
   "swagger": "2.0",
   "info": {
     "title": "My API",
-    "description": "Sarah's Book API",
+    "description": "Sarah's Books API",
     "version": "1.0.0"
   },
   "host": "localhost:7200",
   "basePath": "/",
-  "schemes": ["http"],
+  "schemes": [
+    "http"
+  ],
   "paths": {
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "parameters": [],
-        "responses": {}
-      }
-    },
     "/books/": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           }
         }
       },
@@ -74,7 +71,9 @@
     "/books/{id}": {
       "get": {
         "description": "",
-        "produces": ["application/json"],
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -84,8 +83,8 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Created"
           }
         }
       },
@@ -150,7 +149,7 @@
         ],
         "responses": {
           "200": {
-            "description": "No Content"
+            "description": "OK"
           },
           "500": {
             "description": "Internal Server Error"
