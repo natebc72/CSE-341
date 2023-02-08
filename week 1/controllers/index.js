@@ -1,4 +1,4 @@
-const personFunction = (req, res, next) => {
+const personFunction = (req, res) => {
     res.json('Sarah Valdivia, my favorite person');
 };
 
