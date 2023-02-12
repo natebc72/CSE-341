@@ -15,6 +15,23 @@ content-type: application/json
     "rating":"4.2/5"
 }
 
+### This will update my books in my database
+PUT http://localhost:7200/books/63dc6dfa634e53691df1af59 HTTP/1.1
+content-type: application/json
+
+{
+    "ispn":"1234567898", 
+    "title":"The Silent Patient", 
+    "author":"Michaelides, Alex", 
+    "release":"02-05-2019", 
+    "purchased":"October 2022",
+    "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages",
+    "rating":"4.2/5"
+} 
+
+### This will delete a contact in my database
+DELETE http://localhost:7200/books/63dc6dfa634e53691df1af59 HTTP/1.1
+
 
 
 

@@ -2,23 +2,36 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getBooks = async (req, res) => {
-  const result = await mongodb.getDb().db("sarah").collection('books').find();
-  result.toArray().then((lists) => {
+  mongodb
+  .getDb()
+  .db("sarah")
+  .collection('books')
+  .find()
+  .toArray((err, lists) => {
+    if (err) {
+      res.status(400).json({masage: err});
+    }
     res.setHeader('Content-Type', 'application/json');
     res.status(201).json(lists);
   });
 };
 
 const getOne = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid id to find a book.');
+  }
   const bookId = new ObjectId(req.params.id);
-  const result = await mongodb
+  mongodb
     .getDb()
     .db("sarah")
     .collection('books')
-    .find({ _id: bookId });
-  result.toArray().then((lists) => {
-    res.setHeader('Content-Type', 'application/json');
-    res.status(201).json(lists[0]);
+    .find({_id: bookId})
+    .toArray((err, lists) => {
+      if (err) {
+        res.status(400).json({masage: err});
+      }
+      res.setHeader('Content-Type', 'application/json');
+      res.status(200).json(lists);
   });
 };
 
@@ -41,6 +54,9 @@ const addBook = async (req, res) => {
 };
 
 const updateBook = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid id to find a book.');
+  }
   const bookId = new ObjectId(req.params.id);
   const book = {
     ispn: req.body.ispn,
@@ -65,11 +81,14 @@ const updateBook = async (req, res) => {
 };
 
 const deleteBook = async (req, res) => {
+  if (!ObjectId.isValid(req.params.id)) {
+    res.status(400).json('Must use a valid id to find a book.');
+  }
   const bookId = new ObjectId(req.params.id);
-  const response = await mongodb.getDb().db('sarah').collection('books').remove({ _id: bookId }, true);
+  const response = await mongodb.getDb().db('sarah').collection('books').deleteOne({ _id: bookId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
-    res.status(200).send();
+    res.status(204).send();
   } else {
     res.status(500).json(response.error || 'There was an error while deleting the book.');
   }
