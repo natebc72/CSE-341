@@ -19,7 +19,7 @@ content-type: application/json
 }
 
 ### This will update my books in my database
-PUT http://localhost:7200/books/ HTTP/1.1
+PUT http://localhost:7200/books/ HTTP/1.1 
 content-type: application/json
 
 {
