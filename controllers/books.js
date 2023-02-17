@@ -2,36 +2,23 @@ const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
 const getBooks = async (req, res) => {
-  mongodb
-  .getDb()
-  .db("sarah")
-  .collection('books')
-  .find()
-  .toArray((err, lists) => {
-    if (err) {
-      res.status(400).json({masage: err});
-    }
+  const result = await mongodb.getDb().db('sarah').collection('books').find();
+  result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
-    res.status(201).json(lists);
+    res.status(200).json(lists);
   });
 };
 
 const getOne = async (req, res) => {
-  if (!ObjectId.isValid(req.params.id)) {
-    res.status(400).json('Must use a valid id to find a book.');
-  }
-  const bookId = new ObjectId(req.params.id);
-  mongodb
+  const userId = new ObjectId(req.params.id);
+  const result = await mongodb
     .getDb()
-    .db("sarah")
+    .db('sarah')
     .collection('books')
-    .find({_id: bookId})
-    .toArray((err, lists) => {
-      if (err) {
-        res.status(400).json({masage: err});
-      }
-      res.setHeader('Content-Type', 'application/json');
-      res.status(200).json(lists);
+    .find({ _id: userId });
+  result.toArray().then((lists) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(lists[0]);
   });
 };
 
