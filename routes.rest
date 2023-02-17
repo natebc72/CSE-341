@@ -16,7 +16,7 @@ content-type: application/json
 }
 
 ### This will update my books in my database
-PUT http://localhost:7200/books/63dc6dfa634e53691df1af59 HTTP/1.1
+PUT http://localhost:7200/books/ HTTP/1.1
 content-type: application/json
 
 {
@@ -30,7 +30,7 @@ content-type: application/json
 } 
 
 ### This will delete a contact in my database
-DELETE http://localhost:7200/books/63dc6dfa634e53691df1af59 HTTP/1.1
+DELETE http://localhost:7200/books/ HTTP/1.1
 
 
 
