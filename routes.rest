@@ -1,5 +1,8 @@
 GET http://localhost:7200/books HTTP/1.1
 
+### This is for the GET Individual Id
+GET http://localhost:7200/books/63d2b65823e50d70be597820 HTTP/1.1
+
 
 ### This will create a new book in my database
 POST http://localhost:7200/books HTTP/1.1
