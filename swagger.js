@@ -5,8 +5,8 @@ const doc = {
     title: 'My API',
     description: "Sarah's Books API",
   },
-  host: 'localhost:7200',
-  schemes: ['http'],
+  host: 'week-6-nbc.onrender.com',
+  schemes: ['https'],
 };
 
 const outputFile = './swagger.json';
