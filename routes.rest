@@ -28,7 +28,7 @@ content-type: application/json
     "author":"Michaelides, Alex", 
     "release":"02-05-2019", 
     "purchased":"October 2022",
-    "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages",
+    "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages. Its the best read ever.",
     "rating":"4.2/5"
 } 
 
