@@ -43,10 +43,10 @@ DELETE http://localhost:7200/books/ HTTP/1.1
 
 ###This will be for my Render GET, POST, DELETE
 
-GET https://week-5-nbc.onrender.com/books HTTP/1.1
+GET https://week-7-nbc.onrender.com/books HTTP/1.1
 
 
-POST https://week-5-nbc.onrender.com/books HTTP/1.1
+POST https://week-7-nbc.onrender.com/books HTTP/1.1
 content-Type: application/json
 
 {
@@ -58,3 +58,20 @@ content-Type: application/json
     "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages",
     "rating":"4.2/5"
 }
+
+### This will update my books in my database
+PUT https://week-7-nbc.onrender.com/books HTTP/1.1 
+content-type: application/json
+
+{
+    "ispn":"1234567898", 
+    "title":"The Silent Patient", 
+    "author":"Michaelides, Alex", 
+    "release":"02-05-2019", 
+    "purchased":"October 2022",
+    "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages. Its the best read ever.",
+    "rating":"4.2/5"
+} 
+
+### This will delete a contact in my database
+DELETE https://week-7-nbc.onrender.com/books HTTP/1.1

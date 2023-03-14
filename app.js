@@ -9,10 +9,7 @@ const app = express();
 
 app
   .use(bodyParser.json())
-  .use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    next();
-  })
+  
   .use('/', require('./routes'));
 
 
@@ -29,15 +26,15 @@ const config = {
 // auth router attaches /login, /logout, and /callback routes to the baseURL
 app.use(auth(config));
 
-//this checks to see if user has been authenticated before they can see other pages
-app.get('/books', requiresAuth(), (req, res) => {
-  res.send(JSON.stringify(req.oidc.user));
-})
-
 // req.isAuthenticated is provided from the auth router
 app.get('/', (req, res) => {
   res.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
+
+//this checks to see if user has been authenticated before they can see other pages
+app.get('/books', requiresAuth(), (req, res) => {
+  res.send(JSON.stringify(req.oidc.user));
+})
 
 //For error handling
 process.on('uncaughtException', (err, origin) => {
