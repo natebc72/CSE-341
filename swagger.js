@@ -5,7 +5,7 @@ const doc = {
     title: 'My API',
     description: "Sarah's Books API",
   },
-  host: 'week-7-nbc.onrender.com',
+  host: 'week-8-nbc.onrender.com',
   schemes: ['https'],
 };
 
