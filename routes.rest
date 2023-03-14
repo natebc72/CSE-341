@@ -43,10 +43,10 @@ DELETE http://localhost:7200/books/ HTTP/1.1
 
 ###This will be for my Render GET, POST, DELETE
 
-GET https://week-8-nbc.onrender.com/books HTTP/1.1
+GET https://week-7-nbc.onrender.com/books HTTP/1.1
 
 
-POST https://week-8-nbc.onrender.com/books HTTP/1.1
+POST https://week-7-nbc.onrender.com/books HTTP/1.1
 content-Type: application/json
 
 {
@@ -60,7 +60,7 @@ content-Type: application/json
 }
 
 ### This will update my books in my database
-PUT https://week-8-nbc.onrender.com/books HTTP/1.1 
+PUT https://week-7-nbc.onrender.com/books HTTP/1.1 
 content-type: application/json
 
 {
@@ -74,4 +74,4 @@ content-type: application/json
 } 
 
 ### This will delete a contact in my database
-DELETE https://week-8-nbc.onrender.com/books HTTP/1.1
+DELETE https://week-7-nbc.onrender.com/books HTTP/1.1

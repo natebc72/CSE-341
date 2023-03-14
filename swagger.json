@@ -5,7 +5,7 @@
     "description": "Sarah's Books API",
     "version": "1.0.0"
   },
-  "host": "week-8-nbc.onrender.com",
+  "host": "week-7-nbc.onrender.com",
   "basePath": "/",
   "schemes": ["https"],
   "paths": {
