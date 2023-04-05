@@ -19,17 +19,17 @@ content-type: application/json
 }
 
 ### This will update my books in my database
-PUT http://localhost:7200/books/ HTTP/1.1 
+PUT http://localhost:7200/books/63d2b65823e50d70be597820 HTTP/1.1 
 content-type: application/json
 
 {
-    "ispn":"1234567898", 
-    "title":"The Silent Patient", 
-    "author":"Michaelides, Alex", 
-    "release":"02-05-2019", 
-    "purchased":"October 2022",
-    "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages. Its the best read ever.",
-    "rating":"4.2/5"
+    "ispn": "9781501110368",
+    "title": "It Ends with Us",
+    "author": "Hoover, Collen",
+    "release": "08-02-2016",
+    "purchased": "2021",
+    "review": "She loves it like one of her own children. This is a heart jerker until the very end!",
+    "rating": "4.7/5"
 } 
 
 ### This will delete a contact in my database
@@ -70,7 +70,7 @@ content-type: application/json
     "release":"02-05-2019", 
     "purchased":"October 2022",
     "review":"A thriller that consumes you until the very last sentence, Alex Michalides knows how to keep us strapped into the story throughout all 325 pages. Its the best read ever.",
-    "rating":"4.2/5"
+    "rating":"4.5/5"
 } 
 
 ### This will delete a contact in my database
